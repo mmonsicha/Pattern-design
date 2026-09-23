@@ -6940,7 +6940,7 @@ class Component extends DCLogic {
       goHome:()=>this.go("overview"),
       goLatest:()=>this.go("design-system"),
       recCards:[
-        {zone:"Foundations", title:"Skills", tag:"ใช้บ่อย", tone:"brand", desc:"skill ที่ทีมและ agent เรียกใช้ได้ — suki-designer, delivery standard, design check", meta:"4 skill พร้อมใช้", cta:"เปิด Skills", page:"skills"},
+        {zone:"Foundations", title:"Skills", tag:"ใช้บ่อย", tone:"brand", desc:"skill ที่ทีมและ agent เรียกใช้ได้ — design-pattern-picker, suki-designer, delivery standard, design check", meta:"5 skill พร้อมใช้", cta:"เปิด Skills", page:"skills"},
         {zone:"Components", title:"Component library", tag:"42 ตัว", tone:"info", desc:"tag ssk-* ทั้งหมดพร้อม props จริงจาก source — ค้นหาแล้วก็อป snippet ไปใช้", meta:"0.27.1-beta.1", cta:"เปิด library", page:"components"},
         {zone:"Components", title:"Patterns", tag:"ล่าสุด", tone:"brand", desc:"spec ข้าม product — App Shell, Topnav, Brand Configs, Skeleton, App Selector, List, Create/Edit, Detail page (+ Widget Layout) และ Features & Services พร้อม mock ที่กดเล่นได้จริง", meta:PATTERNS.length+" pattern", cta:"ดู Patterns", page:"patterns"},
         {zone:"Foundations", title:"Tokens", tag:"source of truth", tone:"muted", desc:"color, type, control-height และ radius ทั้งหมด อ่านตรงจาก theme file", meta:"200 custom properties", cta:"เปิด Tokens", page:"foundations"},
@@ -7074,6 +7074,7 @@ class Component extends DCLogic {
         badge:this.badge(f.tone)
       })),
       skills:[
+        {id:"design-pattern-picker", stage:"Stage 3", status:"ใหม่ · proof-of-concept", desc:"อ่าน BR เป็นภาษาคน แล้วบอก Pattern ID + Instance ID + component ที่ต้องใช้ พร้อมสร้างต้นแบบหน้าจอให้ — คนที่ไม่รู้ pattern ก็เรียกใช้ได้ ไม่ต้องเปิดไฟล์ pattern เองหรือ copy โค้ด", track:"PRODUCT", tone:"preview"},
         {id:"suki-designer", stage:"Stage 4", status:"พร้อมใช้", desc:"ประกอบงานที่ออกแบบไว้ให้เป็น markup ที่ใช้ tag จริงของ @sellsuki-org/sellsuki-components พร้อม props ตาม source", track:"PRODUCT", tone:"stable"},
         {id:"design-check", stage:"Stage 5", status:"พร้อมใช้", desc:"รัน checklist 5 rule เดียวกับหน้า Design check — 6-states · a11y · token-only · ใช้ tag ที่มีจริงใน package · handoff shippable", track:"PRODUCT + PROJECT", tone:"stable"},
         {id:"sellsuki-delivery-standard", stage:"Stage 1–5", status:"พร้อมใช้", desc:"pipeline เดียวครอบทั้ง PO / UXUI / DEV แยก track Product กับ Project และ auto-plan ตามขนาดงาน S/M/L", track:"PRODUCT + PROJECT", tone:"stable"},
