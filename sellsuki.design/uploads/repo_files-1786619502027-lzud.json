@@ -1,0 +1,88 @@
+{
+  "name": "@sellsuki-org/sellsuki-components",
+  "private": false,
+  "version": "0.27.1-beta.1",
+  "type": "module",
+  "files": [
+    "dist",
+    "bin",
+    "claude-templates"
+  ],
+  "main": "dist/sellsuki-components.umd.cjs",
+  "module": "dist/sellsuki-components.js",
+  "types": "dist/main.d.ts",
+  "bin": {
+    "ssk": "./bin/ssk.js",
+    "sellsuki-components": "./bin/ssk.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/sellsuki-components.js",
+      "require": "./dist/sellsuki-components.umd.cjs",
+      "types": "./dist/main.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "NODE_ENV=production tsc && vite build",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "generate:icon": "node scripts/generate-icons/index.js",
+    "generate:font": "node scripts/generate-fonts/index.js",
+    "generate:country": "node scripts/generate-country/index.js",
+    "chromatic": "npx chromatic",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@lit/context": "^1.1.3",
+    "@tiptap/core": "^3.28.0",
+    "@tiptap/extension-character-count": "^3.28.0",
+    "@tiptap/extension-color": "^3.28.0",
+    "@tiptap/extension-placeholder": "^3.28.0",
+    "@tiptap/extension-text-align": "^3.28.0",
+    "@tiptap/extension-text-style": "^3.28.0",
+    "@tiptap/starter-kit": "^3.28.0",
+    "change-case": "^5.4.1",
+    "croppie": "^2.6.5",
+    "date-fns": "^3.6.0",
+    "date-fns-tz": "^3.1.3",
+    "dompurify": "^3.4.12",
+    "glob": "^10.3.3",
+    "gridstack": "^12.2.2",
+    "idb": "^7.1.1",
+    "iso-3166-1": "^2.1.1",
+    "lit": "^3.2.1",
+    "mustache": "^4.2.0",
+    "prismjs": "^1.29.0"
+  },
+  "devDependencies": {
+    "@open-wc/lit-helpers": "^0.7.0",
+    "@storybook/addon-designs": "^7.0.5",
+    "@storybook/addon-essentials": "^7.5.1",
+    "@storybook/addon-links": "^7.5.1",
+    "@storybook/addon-mdx-gfm": "^7.5.1",
+    "@storybook/blocks": "^7.5.1",
+    "@storybook/client-api": "^7.6.7",
+    "@storybook/web-components": "^7.5.1",
+    "@storybook/web-components-vite": "^7.5.1",
+    "@types/croppie": "^2.6.4",
+    "@types/dompurify": "^3.2.0",
+    "@types/mustache": "^4.2.2",
+    "@types/prismjs": "^1.26.3",
+    "chromatic": "^6.24.1",
+    "dayjs": "^1.11.13",
+    "ejs": "^3.1.9",
+    "fake-indexeddb": "^4.0.2",
+    "jsdom": "^24.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.5.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.5.3",
+    "vitest": "^0.34.1"
+  }
+}
